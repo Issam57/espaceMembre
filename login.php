@@ -44,11 +44,11 @@
 
                 $mail->isHTML(true);
 
-                $mail->Subject="Confirmation de l'adresse email";
-                $mail->Body= "Afin de valider votre inscription, veuillez cliquez sur ce lien svp : 
+                $mail->Subject=utf8_decode("Confirmation de l'adresse email");
+                $mail->Body=utf8_decode("Afin de valider votre inscription, veuillez cliquez sur ce lien svp : 
                 <a href='http://localhost/espaceMembre/verification.php?email=".$email."&token=".$token."'>Confirmation</a>
 
-                ";
+                ");
 
                 if(!$mail->send()) {
                     $message = "<div class='alert alert-danger alert-dismissible text-center'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
